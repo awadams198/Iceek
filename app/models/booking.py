@@ -17,7 +17,7 @@ class Booking(db.Model):
     userId = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship("User", back_populates="bookings")
 
-    arenaId = db.Column(db.Integer, db.ForeignKey('arena.id'))
+    arenaId = db.Column(db.Integer, db.ForeignKey('arenas.id'))
     arenas = db.relationship('Arena', back_populates='bookings')
 
     def to_dict(self):
