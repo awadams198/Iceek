@@ -127,7 +127,7 @@ const arenaReducer = (state = {}, action) => {
   switch (action.type) {
     case ALL_ARENAS: {
       const newState = { ...state };
-      newState["allArena"] = action.payload;
+      newState["allArenas"] = action.payload;
       return newState;
     }
     case ONE_ARENA: {
