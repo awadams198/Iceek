@@ -10,6 +10,8 @@ import User from "./components/User";
 import { authenticate } from "./store/session";
 import CreateArenaForm from "./components/PostArena/PostArena";
 import ViewAllArenas from "./components/ViewAllArenas/ViewAllArenas";
+import SingleArena from "./components/SingleArena/SingleArena";
+import EditArenaForm from "./components/EditArenaForm/EditArenaForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +43,12 @@ function App() {
         </ProtectedRoute>
         <Route path="/arenas/new" exact={true}>
           <CreateArenaForm />
+        </Route>
+        <Route path="/arenas/:id" exact={true}>
+          <SingleArena />
+        </Route>
+        <Route path="/arenas/:id/edit" exact={true}>
+          <EditArenaForm />
         </Route>
         <ProtectedRoute path="/users" exact={true}>
           <UsersList />

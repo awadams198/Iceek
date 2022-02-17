@@ -82,7 +82,7 @@ function ViewArenas() {
                     </div>
                     <div className="host-and-price">
                       <p>Hosted by: {arena.User}</p>
-                      <p>{"$" + arena.price}/night</p>
+                      <p>{"$" + arena.price}/event</p>
                     </div>
                   </div>
                 </div>

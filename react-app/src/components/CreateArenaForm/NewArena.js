@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { login } from "../../store/session";
-import * as arenaStore from "../../store/arena"
+import * as arenaStore from "../../store/arena";
 import * as postActions from "../../store/arena";
 import isURL from "validator/lib/isURL";
 import isCurrency from "validator/lib/isCurrency";
-
 
 const CreateArenaForm = () => {
   const [errors, setErrors] = useState([]);
@@ -17,48 +16,51 @@ const CreateArenaForm = () => {
   const [address, setAddress] = useState("");
   const [name, setName] = useState("");
   const [url, setUrl] = useState();
-  const [image1, setImage1] = useState("")
+  const [image1, setImage1] = useState("");
   const [image2, setImage2] = useState("");
   const [image3, setImage3] = useState("");
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
-  if(!user) {
-    history.push('/arenas')
+  if (!user) {
+    history.push("/arenas");
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userId = user.id;
-    setUrl({"1":image1, "2":image2, "3":image3})
-    const validationErrors = []
-    if(!name || name.length > 40){
-      validationErrors.push("Arena name must be between 1 and 40 characters.")
+    setUrl({ 1: image1, 2: image2, 3: image3 });
+    const validationErrors = [];
+    if (!name || name.length > 40) {
+      validationErrors.push("Arena name must be between 1 and 40 characters.");
     }
     if (!address || address.length > 40) {
       validationErrors.push("Address must be between 1 and 40 characters.");
     }
-    if(!city || city.length > 20) {
+    if (!city || city.length > 20) {
       validationErrors.push("City must be between 1 and 20 characters.");
     }
-    if(!state || state.length > 20){
+    if (!state || state.length > 20) {
       validationErrors.push("Please enter valid state.");
     }
     if (!country || country.length > 20) {
       validationErrors.push("Country must be between 1 and 20 characters.");
     }
     if (!price || !isCurrency(price) || price > 1000) {
+      validationErrors.push("Please enter a valid price between $1 and $2,000");
+    }
+    if (!isURL(image1) || !isURL(image2) || !isURL(image3)) {
+      validationErrors.push("Please input a valid image URL.");
+    }
+    if (
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(image1) ||
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(image2) ||
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(image3)
+    ) {
       validationErrors.push(
-        "Please enter a valid price between $1 and $2,000"
+        "Must be a valid image url  (.jpeg, .png, .gif, .bmp"
       );
     }
-    if(!isURL(image1) || !isURL(image2) || !isURL(image3)){
-      validationErrors.push("Please input a valid image URL.")
-    }
-    if (!/\.(jpe?g|png|gif|bmp)$/gi.test(image1) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image2) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image3)) {
-      validationErrors.push("Must be a valid image url  (.jpeg, .png, .gif, .bmp");
-    }
-
 
     setErrors(validationErrors);
 
@@ -85,9 +87,9 @@ const CreateArenaForm = () => {
   };
 
   useEffect(() => {
-      dispatch(arenaStore.thunk_getAllArenas());
-      setUrl({ 1: image1, 2: image2, 3: image3 });
-    }, [dispatch, image1, image2, image3]);
+    dispatch(arenaStore.thunk_getAllArenas());
+    setUrl({ 1: image1, 2: image2, 3: image3 });
+  }, [dispatch, image1, image2, image3]);
 
   let content;
   let content2;
@@ -112,9 +114,11 @@ const CreateArenaForm = () => {
           <h3 className="new-arena-header">Add an Arena</h3>
           <div className="error-list-container">
             <ul className="error-list">
-            {errors.map((error, ind) => (
-              <li className="errors" key={ind}>{error}</li>
-            ))}
+              {errors.map((error, ind) => (
+                <li className="errors" key={ind}>
+                  {error}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="input-field-new">
