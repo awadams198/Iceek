@@ -194,8 +194,8 @@ const CreateArenaForm = () => {
               {content}
               <input
                 type="url"
-                placeholder="Main image URL"
-                className="new-arena-input"
+                placeholder="Image URL"
+                className="new-arena-input-img"
                 onChange={(e) => {
                   setImage1(e.target.value);
                 }}
@@ -206,7 +206,7 @@ const CreateArenaForm = () => {
               {content2}
               <input
                 type="url"
-                className="new-arena-input"
+                className="new-arena-input-img"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage2(e.target.value);
@@ -218,7 +218,7 @@ const CreateArenaForm = () => {
               {content3}
               <input
                 type="url"
-                className="new-arena-input"
+                className="new-arena-input-img"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage3(e.target.value);

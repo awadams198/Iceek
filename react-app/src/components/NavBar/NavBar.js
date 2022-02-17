@@ -10,7 +10,7 @@ const NavBar = ({ isLoaded }) => {
   if (user) {
     sessionLinks = (
       <nav>
-        <ul>
+        <ul className="main-nav">
           <li href="#">
             <NavLink to="/" exact={true} activeClassName="active">
               Home
@@ -35,9 +35,9 @@ const NavBar = ({ isLoaded }) => {
   } else {
     sessionLinks = (
       <>
-        <header class="header">
+        <header className="header">
           <nav>
-            <ul class="main-nav">
+            <ul className="main-nav">
               <li href="#">
                 <NavLink to="/" exact={true} activeClassName="active">
                   Home

@@ -1,0 +1,28 @@
+.new-arena-input-img {
+    width: 100px;
+    height: auto;
+}
+
+.new-post-photo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100;
+    width: 100px;
+    margin-bottom: 100px;
+}
+
+.content1-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.post-image-preview {
+    width: 100px;
+    height: 100px;
+}
+
+

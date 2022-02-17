@@ -4,94 +4,51 @@ import { useHistory } from "react-router-dom";
 import * as arenaStore from "../../store/arena";
 
 function ViewArenas() {
-  const history = useHistory();
-  const dispatch = useDispatch();
-  const arenaReducer = useSelector((state) => state.arenaReducer);
-  let arenas = arenaReducer?.allArenas
-  const [arenaState, setArenaState] = useState(arenas);
-  const [isShown, setIsShown] = useState('');
 
-
-
-  if(!arenas){
-    dispatch(arenaStore.getAllArenas_thunk());
-  }
-
-  useEffect(() => {
-    dispatch(arenaStore.getAllArenas_thunk());
-  }, [dispatch]);
-
-
-  return (
-    <section className="background-container">
-      <div className="feed-main-container">
-        <div className="feed-buttons">
-          <div className="buttons-container">
-            <button
-              className="button-guy"
-              onClick={() => setArenaState(arenaReducer?.allArenas)}
-            >
-              All Arenas
-            </button>
-          </div>
-        </div>
-        <div className="map-and-feed">
-          <div className="feed-div">
-            {arenaState &&
-              arenaState.map((arena, key) => (
-                <div
-                  className="spot-feed-container"
-                  key={key}
-                  onMouseEnter={() => setIsShown(arena.id)}
-                  onMouseLeave={() => setIsShown("")}
-
-
-                     >
-                  <img
-                    className="feed-image"
-                    onClick={() => history.push(`/arenas/${arena.id}`)}
-                    src={arena.images[0]?.url}
-                    alt=""
-                  />
-                  <div className="spot-details">
-                    <div>
-                      <span className="spot-name">{arena.name}</span>
-                      <p>
-                        <span className="review-color">
-                          {arena.reviews.length} review(s)
-                        </span>
-                      </p>
-                    </div>
-                    <div
-                      className={
-                        isShown == arena.id
-                          ? "show-images-true"
-                          : "show-images-false"
-                      }
-                    >
-                      <img
-                        className="smaller-image1"
-                        src={arena?.images[1]?.url}
-                        alt=""
-                      />
-                      <img
-                        className="smaller-image2"
-                        src={arena?.images[2]?.url}
-                        alt=""
-                      />
-                    </div>
-                    <div className="host-and-price">
-                      <p>Hosted by: {arena.User}</p>
-                      <p>{"$" + arena.price}/event</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export default ViewArenas;
+  let  history= useHistory();
+   const arenaReducer = useSelector((state) => state.arenaReducer);
+   let arenas = arenaReducer?.allArenas
+ 
+   const arenasArray = Object.assign([], arenas)
+   console.log(arenas)
+ 
+ 
+   const dispatch = useDispatch();
+ 
+   useEffect(() => {
+       dispatch(arenaStore.getAllArenas_thunk());
+   }, [dispatch])
+ 
+   return (
+       <div className='top-level-div'>
+           <div className='berkeley-spots-parent-container'>
+               <div className='san-francisco-location-title'>All Arenas</div>
+               {arenasArray.map(arena => {
+                   return <div className='berkeley-spots-div' key={arena.id}>
+                       <div>
+                       <img
+                     className="feed-image"
+                     onClick={() => history.push(`/arenas/${arena.id}`)}
+                     src={arena.images[0]?.url}
+                     alt=""
+                     />
+                       </div>
+                       <div className='berkeley-arena-info-div'>
+                           <div className='berkeley-arena-details'>{arena.name}</div>
+                           <div className='berkeley-arena-details'>{arena.city},{arena.state}</div>
+                           <div className='berkeley-arena-price'>${arena.price} /event</div>
+                       </div>
+                   </div>
+ 
+ 
+               })}
+           </div>
+            {/* <div className='berkeley-map-parent-container'>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361348.14090973!2d-113.75721884302386!3d36.240999911993384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sus!4v1636756177169!5m2!1sen!2sus" title='allspot' className='berkeley-map'></iframe>
+           </div> */}
+       </div>
+   )
+ }
+ 
+ 
+ export default ViewArenas;
