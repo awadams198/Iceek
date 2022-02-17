@@ -22,6 +22,11 @@ const NavBar = ({ isLoaded }) => {
             </NavLink>
           </li>
           <li href="#">
+            <NavLink to="/arenas/new" exact={true} activeClassName="active">
+              Host Arenas
+            </NavLink>
+          </li>
+          <li href="#">
             <LogoutButton />
           </li>
         </ul>
