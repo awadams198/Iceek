@@ -21,10 +21,10 @@ function ViewArenas() {
  
    return (
        <div className='top-level-div'>
-           <div className='berkeley-spots-parent-container'>
-               <div className='san-francisco-location-title'>All Arenas</div>
+           <div className='arena-container'>
+               <div className='arena-title'>All Arenas</div>
                {arenasArray.map(arena => {
-                   return <div className='berkeley-spots-div' key={arena.id}>
+                   return <div className='arena-div' key={arena.id}>
                        <div>
                        <img
                      className="feed-image"
@@ -33,10 +33,10 @@ function ViewArenas() {
                      alt=""
                      />
                        </div>
-                       <div className='berkeley-arena-info-div'>
-                           <div className='berkeley-arena-details'>{arena.name}</div>
-                           <div className='berkeley-arena-details'>{arena.city},{arena.state}</div>
-                           <div className='berkeley-arena-price'>${arena.price} /event</div>
+                       <div className=''>
+                           <div className='arena-details'>{arena.name}</div>
+                           <div className='arena-details'>{arena.city},{arena.state}</div>
+                           <div className='arena-price'>${arena.price} /event</div>
                        </div>
                    </div>
  
