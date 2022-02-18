@@ -120,18 +120,18 @@ function SingleArena() {
           <img className="arena-main-images1" src={arena?.images[0].url} alt="" />
         </div>
         <div className="small-images-container">
-          {/* <img
+          <img
             className="arena-main-images1"
             id="little-image-top"
             src={arena?.images[1].url}
             alt=""
-          /> */}
-          {/* <img
+          />
+          <img
             className="arena-main-images1"
             // id="little-image-bottom"
             src={arena?.images[2].url}
             alt=""
-          /> */}
+          />
         </div>
       </div>
       <div className="host-and-price-container">

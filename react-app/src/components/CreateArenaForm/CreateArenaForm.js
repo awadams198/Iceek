@@ -6,6 +6,7 @@ import * as arenaStore from "../../store/arena";
 import * as postActions from "../../store/arena";
 import isURL from "validator/lib/isURL";
 import isCurrency from "validator/lib/isCurrency";
+import '../ViewAllArenas/ViewAllArenas'
 
 const CreateArenaForm = () => {
   const [errors, setErrors] = useState([]);
@@ -195,7 +196,7 @@ const CreateArenaForm = () => {
               <input
                 type="url"
                 placeholder="Image URL"
-                className="new-arena-input-img"
+                className="arena-main-images1"
                 onChange={(e) => {
                   setImage1(e.target.value);
                 }}
@@ -206,8 +207,8 @@ const CreateArenaForm = () => {
               {content2}
               <input
                 type="url"
-                className="new-arena-input-img"
-                placeholder="Additional Imagee"
+                className="arena-main-images1"
+                placeholder="Additional Image"
                 onChange={(e) => {
                   setImage2(e.target.value);
                 }}
@@ -218,7 +219,7 @@ const CreateArenaForm = () => {
               {content3}
               <input
                 type="url"
-                className="new-arena-input-img"
+                className="arena-main-images1"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage3(e.target.value);
