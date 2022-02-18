@@ -4,7 +4,7 @@
   grid-template-columns: 800px max-content;
 }
 
-.berkeley-main-images {
+.arena-main-images {
   height: 200px;
   width: 300px;
   object-fit: cover;
@@ -14,7 +14,7 @@
   margin-right: 10px;
 }
 
-.berkeley-spots-div {
+.arena-div {
   width: 671px;
   height: 200px;
   display: flex;
@@ -25,7 +25,7 @@
   padding: 10px;
 }
 
-.berkeley-spots-title {
+.arena-title {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 35px;
@@ -33,25 +33,25 @@
   /* border-bottom: 1px solid lightgrey; */
 }
 
-.berkeley-spots-details {
+.arena-details {
   color: grey;
   /* border-top: 1px solid lightgrey; */
   /* top: -5px;
   padding-top: 5px; */
 }
 
-.berkeley-spots-price {
+.arena-price {
   position: relative;
   display: flex;
   justify-content: flex-start;
   top: 30px;
 }
 
-.berkeley-spots-info-div {
+.arena-info-div {
   width: 371px;
 }
 
-.berkeley-spots-parent-container {
+.arena-parent-container {
   /* position: relative; */
   /* left: 0; */
   /* border: 1px solid lightgrey; */
@@ -64,7 +64,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.san-francisco-location-title {
+.arena-location-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 32px;
@@ -72,14 +72,14 @@
   padding-top: 20px;
 }
 
-.berkeley-map-parent-container {
+.arena-parent-container {
   margin-top: 40px;
   /* width: 100%; */
   height: 1000px;
   /* grid-area: 2; */
 }
 
-.berkeley-map {
+.arena-map {
   border: none;
   position: fixed;
   /* object-fit: cover; */
