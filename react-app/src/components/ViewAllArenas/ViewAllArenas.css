@@ -1,7 +1,89 @@
-.arena-title {
+.top-level-div {
+  display: grid;
+  grid-template-areas: "1 2";
+  grid-template-columns: 800px max-content;
+}
+
+.berkeley-main-images {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  /* display: inline-block; */
+  /* padding-right: 10px; */
+  margin-right: 10px;
+}
+
+.berkeley-spots-div {
+  width: 671px;
+  height: 200px;
+  display: flex;
+  inset: 0px;
+  /* border-radius: 12px; */
+  /* border-bottom: 1px lightgrey solid; */
+  border-top: 1px lightgrey solid;
+  padding: 10px;
+}
+
+.berkeley-spots-title {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 35px;
   /* font-size: 18px; */
   /* border-bottom: 1px solid lightgrey; */
+}
+
+.berkeley-spots-details {
+  color: grey;
+  /* border-top: 1px solid lightgrey; */
+  /* top: -5px;
+  padding-top: 5px; */
+}
+
+.berkeley-spots-price {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  top: 30px;
+}
+
+.berkeley-spots-info-div {
+  width: 371px;
+}
+
+.berkeley-spots-parent-container {
+  /* position: relative; */
+  /* left: 0; */
+  /* border: 1px solid lightgrey; */
+  padding: 20px;
+  padding-bottom: 10px;
+  width: 750px;
+  margin-top: 40px;
+  /* margin-left: 40px; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.san-francisco-location-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.berkeley-map-parent-container {
+  margin-top: 40px;
+  /* width: 100%; */
+  height: 1000px;
+  /* grid-area: 2; */
+}
+
+.berkeley-map {
+  border: none;
+  position: fixed;
+  /* object-fit: cover; */
+  height: 1000px;
+  width: 100%;
+  /* grid-area: 2; */
 }
