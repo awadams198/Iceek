@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router";
 import * as arenaStore from "../../store/arena";
+import "../ViewAllArenas/ViewAllArenas.css";
 
 function SingleArena() {
   const { id } = useParams();
@@ -116,21 +117,21 @@ function SingleArena() {
       </div>
       <div className="images-container">
         <div className="main-image-container">
-          <img className="main-image" src={arena?.images[0].url} alt="" />
+          <img className="arena-main-images1" src={arena?.images[0].url} alt="" />
         </div>
         <div className="small-images-container">
-          <img
-            className="small-image"
+          {/* <img
+            className="arena-main-images1"
             id="little-image-top"
             src={arena?.images[1].url}
             alt=""
-          />
-          <img
-            className="small-image"
-            id="little-image-bottom"
+          /> */}
+          {/* <img
+            className="arena-main-images1"
+            // id="little-image-bottom"
             src={arena?.images[2].url}
             alt=""
-          />
+          /> */}
         </div>
       </div>
       <div className="host-and-price-container">

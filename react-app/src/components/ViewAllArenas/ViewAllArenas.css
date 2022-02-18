@@ -1,3 +1,6 @@
+body{
+background-color: #d6ecef
+}
 .top-level-div {
   display: grid;
   grid-template-areas: "1 2";
@@ -7,6 +10,15 @@
 .arena-main-images {
   height: 200px;
   width: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  /* display: inline-block; */
+  /* padding-right: 10px; */
+  margin-right: 10px;
+}
+.arena-main-images1 {
+  height: 250px;
+  width: 350px;
   object-fit: cover;
   border-radius: 20px;
   /* display: inline-block; */
