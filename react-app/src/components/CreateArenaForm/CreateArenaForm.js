@@ -204,7 +204,7 @@ const CreateArenaForm = () => {
             </div>
             <div className="content1-container">
               {content2}
-              <input
+              {/* <input
                 type="url"
                 className="new-arena-input-img"
                 placeholder="Additional Imagee"
@@ -212,11 +212,11 @@ const CreateArenaForm = () => {
                   setImage2(e.target.value);
                 }}
                 required
-              />
+              /> */}
             </div>
             <div className="content1-container">
               {content3}
-              <input
+              {/* <input
                 type="url"
                 className="new-arena-input-img"
                 placeholder="Additional Image"
@@ -224,7 +224,7 @@ const CreateArenaForm = () => {
                   setImage3(e.target.value);
                 }}
                 required
-              />
+              /> */}
             </div>
           </div>
           <button className="post-arena-form-button" type="submit">
