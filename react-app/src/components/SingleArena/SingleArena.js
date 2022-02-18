@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useParams } from "react-router";
 import * as arenaStore from "../../store/arena";
 import "../ViewAllArenas/ViewAllArenas.css";
+import './SingleArena.css'
 
 function SingleArena() {
   const { id } = useParams();
@@ -128,7 +129,7 @@ function SingleArena() {
           />
           <img
             className="arena-main-images1"
-            // id="little-image-bottom"
+            id="little-image-bottom"
             src={arena?.images[2].url}
             alt=""
           />
