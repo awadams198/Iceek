@@ -111,7 +111,7 @@ function SingleArena() {
         <span className="review-color">{arena?.reviews.length} review(s)</span>
       </div>
       <div className="arena-edit-delete">
-        <div>
+        <div className='arena-info'>
           {arena?.address} {arena?.city}, {arena?.state}
         </div>
         <div>{content}</div>
@@ -142,8 +142,8 @@ function SingleArena() {
       {user && (
         <div className="post-reviews">
           {user.id !== arena?.userId && (
-            <ul className="review-input">
-              <li>
+            <ul>
+              <div className="review-input">
                 <input
                   type="text"
                   className="review-box"
@@ -151,15 +151,15 @@ function SingleArena() {
                   onChange={(e) => setReview(e.target.value)}
                   placeholder="Leave a review"
                 ></input>
-              </li>
-              <li>
+              </div>
+              <div className="sub">
                 <button
                   className="submit-review-button"
                   onClick={() => postReview(arena.id)}
                 >
                   Submit
                 </button>
-              </li>
+              </div>
             </ul>
           )}
         </div>
@@ -178,6 +178,7 @@ function SingleArena() {
               </div>
               {user?.id == arena?.userId && (
                 <div className="edit-delete-button-review">
+                  <div className='review-edit-b'>
                   <button
                     className="edit-review-arena-button"
                     onClick={() => {
@@ -188,12 +189,15 @@ function SingleArena() {
                   >
                     Edit
                   </button>
+                  </div>
+                  <div className='delete-review-b'>
                   <button
                     className="delete-review-button"
                     onClick={() => deleteReview(arena.id)}
                   >
                     <i className="far fa-trash-alt"></i>Delete
                   </button>
+                  </div>
                 </div>
               )}
             </div>

@@ -6,6 +6,143 @@
     bottom: 50px;
 } */
 
+/* .single-post-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 75vh;
+} */
+
+.single-arena-name {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.review-count {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.review-color {
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: .2%; */
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.arena-info {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.host-arena-small {
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 2%; */
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.arena-price {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* min-height: 75vh; */
+}
+
+.review-input {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.posted-by {
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 2%; */
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.review-contents {
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 2%; */
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edit-delete-button-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: safe;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 2px 2px;
+  border-radius: 1px;
+}
+
+/* .edit-review-b-{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.delete-review-b {
+  margin: 1rem 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+} */
+
 .edit-arena-button {
   display: flex;
   /* flex-direction: column; */
@@ -115,7 +252,7 @@
   /* flex-direction: column; */
   justify-content: center;
   right: px;
-  display: inline-block;
+  /* display: inline-block; */
   outline: none;
   border-width: 0px;
   border-radius: 3px;
@@ -134,4 +271,9 @@
   width: auto;
   font-size: 14px;
   color: rgb(255, 255, 255);
+}
+
+.sub{
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,10 @@
+.edit-form {
+  background-color: #d6ecef;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 75vh;
+}
