@@ -23,3 +23,13 @@
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
+
+.main-form-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20%;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 75vh;
+}
