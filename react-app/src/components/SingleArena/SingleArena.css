@@ -273,7 +273,18 @@
   color: rgb(255, 255, 255);
 }
 
-.sub{
+.sub {
   display: flex;
   justify-content: center;
+}
+
+.edit-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: safe;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 2px 2px;
+  border-radius: 1px;
 }
