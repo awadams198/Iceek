@@ -7,6 +7,7 @@ import * as postActions from "../../store/arena";
 import isURL from "validator/lib/isURL";
 import isCurrency from "validator/lib/isCurrency";
 import '../ViewAllArenas/ViewAllArenas'
+import './CreateArenaForm.css'
 
 const CreateArenaForm = () => {
   const [errors, setErrors] = useState([]);

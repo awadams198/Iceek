@@ -9,60 +9,54 @@ const NavBar = ({ isLoaded }) => {
   let sessionLinks;
   if (user) {
     sessionLinks = (
-      <nav>
-        <ul className="main-nav">
-          <li href="#">
-            <NavLink to="/" exact={true} activeClassName="active">
-              Home
-            </NavLink>
-          </li>
-          <li href="#">
-            <NavLink to="/arenas" exact={true} activeClassName="active">
-              Arenas
-            </NavLink>
-          </li>
-          <li href="#">
-            <NavLink to="/arenas/new" exact={true} activeClassName="active">
-              Host Arenas
-            </NavLink>
-          </li>
-          <li href="#">
-            <LogoutButton />
-          </li>
-        </ul>
-      </nav>
+      <header>
+        <div className="container">
+          <h1 className='logo'></h1>
+          <nav>
+            <ul className="main-nav">
+              <li><a href="#"><NavLink to="/" exact={true} activeClassName="active">Home</NavLink></a></li>
+              <li><a href="#"><NavLink to="/arenas" exact={true} activeClassName="active">Arenas</NavLink></a></li>
+              <li><a href="#"><NavLink to="/arenas/new" exact={true} activeClassName="active">Host Arenas</NavLink></a></li>
+              <li><a href="#"><LogoutButton /></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
     );
   } else {
     sessionLinks = (
       <>
-        <header className="header">
-          <nav>
-            <ul className="main-nav">
-              <li href="#">
-                <NavLink to="/" exact={true} activeClassName="active">
-                  Home
-                </NavLink>
-              </li>
-              <li href="#">
-                <NavLink to="/login" exact={true} activeClassName="active">
-                  Login
-                </NavLink>
-              </li>
-              <li href="#">
-                <NavLink to="/sign-up" exact={true} activeClassName="active">
-                  Sign Up
-                </NavLink>
-              </li>
-              <li href="#">
-                <NavLink to="/arenas" exact={true} activeClassName="active">
-                  Arenas
-                </NavLink>
-              </li>
-              <li href="#">
-                <LogoutButton />
-              </li>
-            </ul>
-          </nav>
+        <header>
+          <div className="container">
+           <h1 className='logo'></h1>
+            <nav>
+              <ul className="main-nav">
+                <li href="#">
+                  <NavLink to="/" exact={true} activeClassName="active">
+                    Home
+                  </NavLink>
+                </li>
+                <li href="#">
+                  <NavLink to="/login" exact={true} activeClassName="active">
+                    Login
+                  </NavLink>
+                </li>
+                <li href="#">
+                  <NavLink to="/sign-up" exact={true} activeClassName="active">
+                    Sign Up
+                  </NavLink>
+                </li>
+                <li href="#">
+                  <NavLink to="/arenas" exact={true} activeClassName="active">
+                    Arenas
+                  </NavLink>
+                </li>
+                <li href="#">
+                  <LogoutButton />
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
       </>
     );
