@@ -38,10 +38,10 @@ function SingleArena() {
   if (userId === arena?.userId) {
     content = (
       <div className="edit-delete">
-        <a href={`/arenas/${arena.id}/edit`}>Edit</a>
+        <a className='edit-arena-button' href={`/arenas/${arena.id}/edit`}>Edit</a>
         <div>
           <button
-            className="single-arena-delete-button"
+            className="delete-arena-button"
             onClick={() => deleteArena(id)}
           >
             <i className="far fa-trash-alt"></i>Delete

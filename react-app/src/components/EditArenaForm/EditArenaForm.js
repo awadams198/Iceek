@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { useParams } from "react-router";
-
+import "./EditArenaForm.css";
 
 import * as arenaActions from "../../store/arena";
 
@@ -12,7 +12,7 @@ const EditArenaForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { id } = useParams();
-  let currentArenas = useSelector((state) => state?.arenaReducer.allArenas)
+  let currentArenas = useSelector((state) => state?.arenaReducer.allArenas);
   let currentArena;
   if (currentArenas) {
     currentArena = currentArenas.filter((arena) => arena["id"] === id)[0];
@@ -20,21 +20,20 @@ const EditArenaForm = () => {
   const [price, setPrice] = useState(currentArena?.price);
   const [name, setName] = useState(currentArena?.name);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const userId = user.id;
-    await dispatch(arenaActions.updateArena_thunk({ id, userId, price, name}))
-      .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      })
+    await dispatch(
+      arenaActions.updateArena_thunk({ id, userId, price, name })
+    ).catch(async (res) => {
+      const data = await res.json();
+      if (data && data.errors) setErrors(data.errors);
+    });
     await dispatch(arenaActions.getAllArenas_thunk()).then(
       (res) => res && history.push("/arenas")
     );
   };
-
 
   return (
     <>
@@ -69,7 +68,9 @@ const EditArenaForm = () => {
                 ></input>
               </div>
             </div>
-            <button className="edit-form-button" type="submit">Submit</button>
+            <button className="edit-form-button" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </section>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { signUp } from "../../../store/session";
+import "./SignUpForm.css";
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -44,7 +45,7 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={onSignUp}>
-      <div>
+      <div className="signup-form">
         <div>
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
@@ -87,7 +88,7 @@ const SignUpForm = () => {
             required={true}
           ></input>
         </div>
-        <button type="submit">Sign Up</button>
+        <button className='s-button' type="submit">Sign Up</button>
       </div>
     </form>
   );

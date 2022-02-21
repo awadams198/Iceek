@@ -1,21 +1,4 @@
-.signup-form {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.signup-form {
-  background-color: #d6ecef;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20%;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 75vh;
-}
-
-.s-button {
+.logout-button {
   display: flex;
   /* flex-direction: column; */
   justify-content: center;

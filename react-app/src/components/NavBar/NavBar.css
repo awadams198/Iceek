@@ -2,17 +2,16 @@
   box-sizing: border-box;
 }
 
-
 body {
-	margin: 0;
-	background-color: antiquewhite;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+  margin: 0;
+  background-color: antiquewhite;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
 }
 
 .container {
-	width: 75%;
-	margin: 0 auto;
+  width: 75%;
+  margin: 0 auto;
 }
 
 header {
@@ -20,7 +19,7 @@ header {
 }
 
 header::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -60,7 +59,7 @@ nav a:hover {
 }
 
 nav a::before {
-  content: '';
+  content: "";
   display: block;
   height: 5px;
   background-color: #444;
@@ -70,4 +69,30 @@ nav a::before {
   width: 0%;
 
   transition: all ease-in-out 250ms;
+}
+
+.logout-button {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  right: px;
+  display: inline-block;
+  outline: none;
+  border-width: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background: rgb(0, 82, 204);
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 12px;
+  vertical-align: middle;
+  width: auto;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
 }
