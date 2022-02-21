@@ -179,7 +179,7 @@ function SingleArena() {
               {user?.id == arena?.userId && (
                 <div className="edit-delete-button-review">
                   <button
-                    className="single-arena-button"
+                    className="edit-review-arena-button"
                     onClick={() => {
                       setEditedReview(arena.review);
                       setEditReviewId(arena.id);
@@ -189,7 +189,7 @@ function SingleArena() {
                     Edit
                   </button>
                   <button
-                    className="single-arena-button"
+                    className="delete-review-button"
                     onClick={() => deleteReview(arena.id)}
                   >
                     <i className="far fa-trash-alt"></i>Delete
