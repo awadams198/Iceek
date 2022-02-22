@@ -229,7 +229,7 @@ const CreateArenaForm = () => {
             </div>
           </div>
           <button className="post-arena-form-button" type="submit">
-            Edit Arena
+            Post Arena
           </button>
         </form>
       </div>
