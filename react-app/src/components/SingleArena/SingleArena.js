@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useParams } from "react-router";
 import * as arenaStore from "../../store/arena";
 import "../ViewAllArenas/ViewAllArenas.css";
-import './SingleArena.css'
+import "./SingleArena.css";
 
 function SingleArena() {
   const { id } = useParams();
@@ -16,6 +16,7 @@ function SingleArena() {
   const [editedReview, setEditedReview] = useState("");
   const [editReviewId, setEditReviewId] = useState("");
   const [editSelected, setEditSelected] = useState([false, null]);
+  const [errors, setErrors] = useState([]);
   const userId = user?.id;
 
   if (!arenas) {
@@ -38,7 +39,9 @@ function SingleArena() {
   if (userId === arena?.userId) {
     content = (
       <div className="edit-delete">
-        <a className='edit-arena-button' href={`/arenas/${arena.id}/edit`}>Edit</a>
+        <a className="edit-arena-button" href={`/arenas/${arena.id}/edit`}>
+          Edit
+        </a>
         <div>
           <button
             className="delete-arena-button"
@@ -58,11 +61,14 @@ function SingleArena() {
   };
 
   const postReview = async (arenaId) => {
-    if (review.length < 300) {
+    if ((review.length > 0) & (review.length < 300)) {
+      setErrors([]);
       await dispatch(arenaStore.postReview_thunk({ review, userId, arenaId }));
       await dispatch(arenaStore.getAllArenas_thunk());
+      setReview("");
+    } else {
+      return setErrors(["Please provide a review"]);
     }
-    setReview("");
   };
 
   let reviewEdit = (
@@ -111,14 +117,18 @@ function SingleArena() {
         <span className="review-color">{arena?.reviews.length} review(s)</span>
       </div>
       <div className="arena-edit-delete">
-        <div className='arena-info'>
+        <div className="arena-info">
           {arena?.address} {arena?.city}, {arena?.state}
         </div>
         <div>{content}</div>
       </div>
       <div className="images-container">
         <div className="main-image-container">
-          <img className="arena-main-images1" src={arena?.images[0].url} alt="" />
+          <img
+            className="arena-main-images1"
+            src={arena?.images[0].url}
+            alt=""
+          />
         </div>
         <div className="small-images-container">
           <img
@@ -159,6 +169,11 @@ function SingleArena() {
                 >
                   Submit
                 </button>
+                <ul className="label">
+                  {errors.map((error, idx) => (
+                    <li key={idx}>{error}</li>
+                  ))}
+                </ul>
               </div>
             </ul>
           )}
@@ -178,25 +193,25 @@ function SingleArena() {
               </div>
               {user?.id == arena?.userId && (
                 <div className="edit-delete-button-review">
-                  <div className='review-edit-b'>
-                  <button
-                    className="edit-review-arena-button"
-                    onClick={() => {
-                      setEditedReview(arena.review);
-                      setEditReviewId(arena.id);
-                      setEditSelected([!editSelected[0], arena.id]);
-                    }}
-                  >
-                    Edit
-                  </button>
+                  <div className="review-edit-b">
+                    <button
+                      className="edit-review-arena-button"
+                      onClick={() => {
+                        setEditedReview(arena.review);
+                        setEditReviewId(arena.id);
+                        setEditSelected([!editSelected[0], arena.id]);
+                      }}
+                    >
+                      Edit
+                    </button>
                   </div>
-                  <div className='delete-review-b'>
-                  <button
-                    className="delete-review-button"
-                    onClick={() => deleteReview(arena.id)}
-                  >
-                    <i className="far fa-trash-alt"></i>Delete
-                  </button>
+                  <div className="delete-review-b">
+                    <button
+                      className="delete-review-button"
+                      onClick={() => deleteReview(arena.id)}
+                    >
+                      <i className="far fa-trash-alt"></i>Delete
+                    </button>
                   </div>
                 </div>
               )}

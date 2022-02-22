@@ -2,7 +2,7 @@
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
-  right: px;
+  /* right: px; */
   display: inline-block;
   outline: none;
   border-width: 0px;
@@ -22,6 +22,7 @@
   width: auto;
   font-size: 14px;
   color: rgb(255, 255, 255);
+  /* top: 5px; */
 }
 
 .main-form-container {
@@ -32,4 +33,27 @@
   justify-content: space-around;
   align-items: center;
   min-height: 75vh;
+}
+
+.post-image-preview {
+  height: 25vh;
+  width: 25vw;
+  object-fit: cover;
+}
+
+.new-post-photo-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 35vh;
+  width: 80vw;
+  margin-bottom: 20px;
+}
+
+.content1-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
 }

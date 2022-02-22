@@ -1,5 +1,5 @@
-body{
-background-color: #d6ecef
+body {
+  background-color: #d6ecef;
 }
 .top-level-div {
   display: grid;
@@ -54,13 +54,15 @@ background-color: #d6ecef
 
 .arena-price {
   position: relative;
-  display: flex;
+  display: left;
   justify-content: flex-start;
-  top: 20px;
+  top: 30px;
+  /* left: 123px; */
 }
 
 .arena-info-div {
   width: 371px;
+  
 }
 
 .arena-parent-container {

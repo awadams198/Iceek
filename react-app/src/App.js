@@ -12,6 +12,7 @@ import CreateArenaForm from "./components/PostArena/PostArena";
 import ViewAllArenas from "./components/ViewAllArenas/ViewAllArenas";
 import SingleArena from "./components/SingleArena/SingleArena";
 import EditArenaForm from "./components/EditArenaForm/EditArenaForm";
+import SplashPage from "./components/SplashPage/SplashPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route path="/" exact={true}>
-            
+            {/* <SplashPage /> */}
           </Route>
           <Route path="/login" exact={true}>
             <LoginForm />
