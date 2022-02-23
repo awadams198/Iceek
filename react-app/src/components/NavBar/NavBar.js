@@ -51,9 +51,6 @@ const NavBar = ({ isLoaded }) => {
                     Arenas
                   </NavLink>
                 </li>
-                <li href="#">
-                  <LogoutButton />
-                </li>
               </ul>
             </nav>
           </div>

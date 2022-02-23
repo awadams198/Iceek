@@ -11,8 +11,8 @@ import { authenticate } from "./store/session";
 import CreateArenaForm from "./components/PostArena/PostArena";
 import ViewAllArenas from "./components/ViewAllArenas/ViewAllArenas";
 import SingleArena from "./components/SingleArena/SingleArena";
-import EditArenaForm from "./components/EditArenaForm/EditArenaForm";
 import SplashPage from "./components/SplashPage/SplashPage";
+import EditArenaForm from "./components/editArenaForm/EditArenaForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,11 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar isLoaded={isLoaded} />
-      {isLoaded && (
         <Switch>
-          <Route path="/" exact={true}>
-            {/* <SplashPage /> */}
-          </Route>
           <Route path="/login" exact={true}>
             <LoginForm />
           </Route>
@@ -61,11 +57,10 @@ function App() {
           <ProtectedRoute path="/users/:userId" exact={true}>
             <User />
           </ProtectedRoute>
-          <ProtectedRoute path="/" exact={true}>
-            <h1>My Home Page</h1>
-          </ProtectedRoute>
+          <Route path="/" exact={true}>
+            <SplashPage isLoaded={isLoaded} />
+          </Route>
         </Switch>
-      )}
     </BrowserRouter>
   );
 }

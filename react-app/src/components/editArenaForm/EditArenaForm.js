@@ -15,7 +15,7 @@ const EditArenaForm = () => {
   let currentArenas = useSelector((state) => state?.arenaReducer.allArenas);
   let currentArena;
   if (currentArenas) {
-    currentArena = currentArenas.filter((arena) => arena["id"] === id)[0];
+    currentArena = currentArenas.filter((arena) => arena["id"] == id)[0];
   }
   const [price, setPrice] = useState(currentArena?.price);
   const [name, setName] = useState(currentArena?.name);

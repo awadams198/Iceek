@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import * as arenaStore from "../../store/arena";
 import "../ViewAllArenas/ViewAllArenas.css";
 import "./SingleArena.css";
-
+import EditArenaModal from '../EditArenaModal'
 function SingleArena() {
   const { id } = useParams();
   const history = useHistory();
@@ -39,9 +39,10 @@ function SingleArena() {
   if (userId === arena?.userId) {
     content = (
       <div className="edit-delete">
-        <a className="edit-arena-button" href={`/arenas/${arena.id}/edit`}>
+        {/* <a className="edit-arena-button" href={`/arenas/${arena.id}/edit`}>
           Edit
-        </a>
+        </a> */}
+        <EditArenaModal />
         <div>
           <button
             className="delete-arena-button"

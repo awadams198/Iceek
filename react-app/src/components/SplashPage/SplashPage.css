@@ -1,0 +1,11 @@
+
+
+  .main-bg{
+    background-image: url("https://i.ibb.co/zZsnKvT/klim-musalimov-cy-SFWKt56-TU-unsplash.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-width: 100%;
+    max-width: 100%;
+    background-position: center;
+    height: 100%;
+  }
