@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import * as arenaStore from "../../store/arena";
 import "../ViewAllArenas/ViewAllArenas.css";
 import "./SingleArena.css";
-import EditArenaModal from '../EditArenaModal'
+import EditArenaModal from "../EditArenaModal";
 function SingleArena() {
   const { id } = useParams();
   const history = useHistory();
@@ -82,12 +82,13 @@ function SingleArena() {
         placeholder=""
       ></textarea>
       <span>
-        <button
-          id="edit-review-submit"
-          onClick={() => editReview(editReviewId, editedReview)}
-        >
-          Update
-        </button>
+        {/* <div className='edit-review-update-button'> */}
+          <button className="edit-review-update-button"
+            onClick={() => editReview(editReviewId, editedReview)}
+          >
+            Update
+          </button>
+        {/* </div> */}
       </span>
     </div>
   );

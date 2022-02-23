@@ -46,7 +46,7 @@ const EditArenaForm = () => {
                 <div key={ind}>{error}</div>
               ))}
             </div>
-            <div>
+            <div className="edit-form-name">
               <label htmlFor="name">Name</label>
               <input
                 className="edit-Arena-input"
@@ -56,7 +56,7 @@ const EditArenaForm = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></input>
-              <div>
+              <div className="edit-form-price">
                 <label htmlFor="price">Price</label>
                 <input
                   className="edit-Arena-input"

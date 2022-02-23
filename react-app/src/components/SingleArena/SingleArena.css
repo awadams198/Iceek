@@ -171,6 +171,7 @@
   width: auto;
   font-size: 14px;
   color: rgb(255, 255, 255);
+  margin: 10px;
 }
 
 .edit-review-arena-button {
@@ -266,4 +267,32 @@
   margin: 1rem 0;
   padding: 2px 2px;
   border-radius: 1px;
+}
+
+.edit-review-update-button {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  right: px;
+  display: inline-block;
+  outline: none;
+  border-width: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background: rgb(0, 82, 204);
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 12px;
+  vertical-align: middle;
+  width: auto;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin: 2px;
+  bottom: 20px;
 }
