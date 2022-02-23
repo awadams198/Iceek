@@ -113,9 +113,9 @@ function SingleArena() {
 
   return (
     <div className="single-post-container">
-      <div className="single-arena-name">{arena?.name}</div>
+      <h1 className="single-arena-name">{arena?.name}</h1>
       <div className="review-count">
-        <span className="review-color">{arena?.reviews.length} review(s)</span>
+        <h2 className="review-color">{arena?.reviews.length} review(s)</h2>
       </div>
       <div className="arena-edit-delete">
         <div className="arena-info">

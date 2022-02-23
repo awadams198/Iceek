@@ -45,9 +45,9 @@ function App() {
           <Route path="/arenas/new" exact={true}>
             <CreateArenaForm />
           </Route>
-          <Route path="/arenas/:id" exact={true}>
+          <ProtectedRoute path="/arenas/:id" exact={true}>
             <SingleArena />
-          </Route>
+          </ProtectedRoute>
           <Route path="/arenas/:id/edit" exact={true}>
             <EditArenaForm />
           </Route>

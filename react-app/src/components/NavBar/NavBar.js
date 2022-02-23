@@ -46,11 +46,6 @@ const NavBar = ({ isLoaded }) => {
                     Sign Up
                   </NavLink>
                 </li>
-                <li href="#">
-                  <NavLink to="/arenas" exact={true} activeClassName="active">
-                    Arenas
-                  </NavLink>
-                </li>
               </ul>
             </nav>
           </div>
