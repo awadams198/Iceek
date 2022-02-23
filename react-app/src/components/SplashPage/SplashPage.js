@@ -19,7 +19,7 @@ function SplashPage({ isLoaded }) {
                     <div className='homeAboutContainer'>
                         <a
                             className='homeAboutLink'
-                            href='https://www.linkedin.com/in/dominique-samuels-b33233197/'
+                            href='https://www.linkedin.com/in/anthony-adams-a4221a228/'
                             target='_blank'
                             rel='noreferrer'
                         >
@@ -30,7 +30,7 @@ function SplashPage({ isLoaded }) {
                         </a>
                         <a
                             className='homeAboutLink'
-                            href='https://github.com/dominisam98'
+                            href='https://github.com/awadams198'
                             target='_blank'
                             rel='noreferrer'
                         >
