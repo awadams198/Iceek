@@ -71,7 +71,7 @@ def one_arena(id):
     return oneArena
 
 #UPDATE ARENA POST
-@arena_routes.route("/<int:id>/edit", methods=["POST"])
+@arena_routes.route("/<int:id>/edit", methods=["PUT"])
 def updateArena(id):
     arenaToUpdate = Arena.query.get(id)
     arenaToUpdate.price = request.json["price"]

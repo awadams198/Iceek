@@ -79,7 +79,7 @@ export const updateArena_thunk =
   ({ id, userId, price, name }) =>
   async (dispatch) => {
     const res = await fetch(`/api/arenas/${id}/edit`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

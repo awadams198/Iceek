@@ -6,15 +6,9 @@
     bottom: 50px;
 } */
 
-/* .single-post-container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20%;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 75vh;
-} */
+.single-post-container {
+  background-color: #d6ecef;
+}
 
 .single-arena-name {
   display: flex;

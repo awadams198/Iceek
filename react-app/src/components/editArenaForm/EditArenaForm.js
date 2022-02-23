@@ -47,6 +47,7 @@ const EditArenaForm = () => {
               ))}
             </div>
             <div>
+              <label htmlFor="name">Name</label>
               <input
                 className="edit-Arena-input"
                 name="name"
@@ -56,6 +57,7 @@ const EditArenaForm = () => {
                 onChange={(e) => setName(e.target.value)}
               ></input>
               <div>
+                <label htmlFor="price">Price</label>
                 <input
                   className="edit-Arena-input"
                   name="price"

@@ -1,4 +1,4 @@
-body {
+.top-level-div {
   background-color: #d6ecef;
 }
 .top-level-div {
@@ -86,12 +86,11 @@ body {
   padding-top: 20px;
 }
 
-.arena-parent-container {
+/* .arena-parent-container {
   margin-top: 40px;
   /* width: 100%; */
-  height: 1000px;
+  
   /* grid-area: 2; */
-}
 
 .arena-map {
   border: none;

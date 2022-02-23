@@ -11,7 +11,7 @@ function SignUpFormModal() {
   return (
     <>
       <button className="delete-arena-button" onClick={() => setShowModal(true)}>
-        <i className="far fa-trash-alt"></i>Edit Home
+        <i className="far fa-trash-alt"></i>Edit Arena
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
