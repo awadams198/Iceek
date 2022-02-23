@@ -10,14 +10,89 @@ const NavBar = ({ isLoaded }) => {
   if (user) {
     sessionLinks = (
       <header>
+         <div className="about-container">
+                <a
+                  className="homeAboutLink"
+                  href="https://github.com/awadams198"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={"https://i.ibb.co/gFT8dHz/logo-github.jpg"}
+                    className="about-img"
+                  />
+                  <a
+                            className='homeAboutLink'
+                            href='https://www.linkedin.com/in/anthony-adams-a4221a228/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/S3587Vd/Linked-In-logo-initials.png'}
+                                className='about-img'
+                            />
+                        </a>
+                </a>
+              </div>
         <div className="container">
-          <h1 className='logo'></h1>
+          <h1 className="logo"></h1>
           <nav>
             <ul className="main-nav">
-              <li><a href="#"><NavLink to="/" exact={true} activeClassName="active">Home</NavLink></a></li>
-              <li><a href="#"><NavLink to="/arenas" exact={true} activeClassName="active">Arenas</NavLink></a></li>
-              <li><a href="#"><NavLink to="/arenas/new" exact={true} activeClassName="active">Host Arenas</NavLink></a></li>
-              <li><a href="#"><LogoutButton /></a></li>
+              {/* <div className="about-container">
+                <a
+                  className="homeAboutLink"
+                  href="https://github.com/awadams198"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={"https://i.ibb.co/gFT8dHz/logo-github.jpg"}
+                    className="about-img"
+                  />
+                  <a
+                            className='homeAboutLink'
+                            href='https://www.linkedin.com/in/anthony-adams-a4221a228/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/S3587Vd/Linked-In-logo-initials.png'}
+                                className='about-img'
+                            />
+                        </a>
+                </a>
+              </div> */}
+
+              <li>
+                <a href="#">
+                  <NavLink to="/" exact={true} activeClassName="active">
+                    Home
+                  </NavLink>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <NavLink to="/arenas" exact={true} activeClassName="active">
+                    Arenas
+                  </NavLink>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <NavLink
+                    to="/arenas/new"
+                    exact={true}
+                    activeClassName="active"
+                  >
+                    Host Arenas
+                  </NavLink>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <LogoutButton />
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -28,7 +103,7 @@ const NavBar = ({ isLoaded }) => {
       <>
         <header>
           <div className="container">
-           <h1 className='logo'></h1>
+            <h1 className="logo"></h1>
             <nav>
               <ul className="main-nav">
                 <li href="#">
