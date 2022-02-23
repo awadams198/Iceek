@@ -99,10 +99,15 @@ nav a::before {
 .about-img {
   height: 30px;
   width: 30px;
-  left: 30px
+  left: 30px;
+  margin: 10px;
+ display: row;
+ justify-content: start;
+ 
+
 }
 
 .about-container{
   right: 150px;
-  top: 30px
+  /* top: 30px; */
 }

@@ -112,9 +112,9 @@ const CreateArenaForm = () => {
     <section className="section-container">
       <div className="form-container">
         <form className="main-form-container" onSubmit={handleSubmit}>
-          <h2>List Your Arena Here!</h2>
+          <h2 className="arena-label">List Your Arena Here!</h2>
           <div className="error-list-container">
-          <h3 className="new-arena-header">Arena Info</h3>
+          <h3 className="arena-label-1">Arena Info</h3>
             <ul className="error-list">
               {errors.map((error, ind) => (
                 <li className="errors" key={ind}>
@@ -175,7 +175,7 @@ const CreateArenaForm = () => {
             ></input>
           </div>
           <div>
-            <label>
+            <label className="arena-label-1">
               Please set a renting price:
               <input
                 className="rent-price"
@@ -189,7 +189,7 @@ const CreateArenaForm = () => {
               ></input>
             </label>
           </div>
-          <h2 className="new-post-photo-header">Please provide three images:</h2>
+          <h2 className="arena-label-1">Please provide three images:</h2>
           <div className="new-post-photo-container">
             <div className="content1-container">
               {content}

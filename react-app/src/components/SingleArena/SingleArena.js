@@ -149,7 +149,7 @@ function SingleArena() {
       </div>
       <div className="host-and-price-container">
         <div className="host-arena-small">Hosted by: {arena?.User}</div>
-        <div className="arena-price">Price: ${arena?.price}/event</div>
+        <div className="arena-price-1">Price: ${arena?.price}/event</div>
       </div>
       {user && (
         <div className="post-reviews">
