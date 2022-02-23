@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { useParams } from "react-router";
+import isCurrency from "validator/lib/isCurrency";
 import "./EditArenaForm.css";
 
 import * as arenaActions from "../../store/arena";
@@ -24,24 +25,38 @@ const EditArenaForm = () => {
     e.preventDefault();
 
     const userId = user.id;
-    await dispatch(
-      arenaActions.updateArena_thunk({ id, userId, price, name })
-    ).catch(async (res) => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
-    });
-    await dispatch(arenaActions.getAllArenas_thunk()).then(
-      (res) => res && history.push("/arenas")
-    );
-  };
+    const validationErrors = [];
 
+    if (!name) {
+      validationErrors.push("Arena name must be between 1 and 40 characters.");
+    } 
+    
+    else if (!price) {
+      validationErrors.push("Please enter a valid price between $1 and $1,000");
+    }
+
+    setErrors(validationErrors);
+
+    if (!validationErrors.length) {
+        await dispatch(
+          arenaActions.updateArena_thunk({ id, userId, price, name })
+          ).catch(async (res) => {
+            const data = await res.json();
+            if (data && data.errors) setErrors(data.errors);
+          });
+          await dispatch(arenaActions.getAllArenas_thunk()).then(
+            (res) => res && history.push("/arenas")
+            );
+          }
+          };
+          
   return (
     <>
       <section>
         <div>
           <form className="edit-form" onSubmit={handleSubmit}>
             <h3 className="edit-header">Edit Arena</h3>
-            <div>
+            <div className="error-msg">
               {errors.map((error, ind) => (
                 <div key={ind}>{error}</div>
               ))}
