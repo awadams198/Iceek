@@ -84,7 +84,7 @@
   align-items: center;
   /* min-height: 75vh; */
   left: 0px;
-  /* font-size:20px; font-weight:300; */
+  font-size:20px; font-weight:300;
 }
 
 .review-input {

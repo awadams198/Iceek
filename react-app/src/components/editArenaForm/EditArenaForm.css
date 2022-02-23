@@ -9,10 +9,15 @@
   min-height: 75vh;
 }
 
-.edit-form-name,
-.edit-form-price,
 .edit-header {
   color: #1325c9;
+  font-size:26px; font-weight:300;
+}
+
+.edit-form-name,
+.edit-form-price {
+  color: #1325c9;
+  font-size:20px; font-weight:300;
 }
 
 .edit-form-button {

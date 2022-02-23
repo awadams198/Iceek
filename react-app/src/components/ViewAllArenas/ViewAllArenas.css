@@ -43,6 +43,7 @@
   height: 35px;
   /* font-size: 18px; */
   /* border-bottom: 1px solid lightgrey; */
+  font-size:26px; font-weight:500;
 }
 
 .arena-details {
@@ -50,6 +51,7 @@
   /* border-top: 1px solid lightgrey; */
   /* top: -5px;
   padding-top: 5px; */
+  font-size:20px; font-weight:400;
 }
 
 .arena-price {
@@ -58,6 +60,7 @@
   justify-content: flex-start;
   top: 30px;
   /* left: 123px; */
+  font-size:20px; font-weight:400;
 }
 
 .arena-info-div {
