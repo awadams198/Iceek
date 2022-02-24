@@ -191,8 +191,7 @@ function SingleArena() {
                   {editSelected[0] && editSelected[1] == arena.id
                     ? reviewEdit
                     : arena?.review}
-                </div>
-              </div>
+                    
               {user?.id == arena?.userId && (
                 <div className="edit-delete-button-review">
                   <div className="review-edit-b">
@@ -217,6 +216,8 @@ function SingleArena() {
                   </div>
                 </div>
               )}
+                </div>
+              </div>
             </div>
           ))}
       </div>
