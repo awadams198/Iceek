@@ -11,6 +11,10 @@ Client: JavaScript, NodeJS, React, Redux
 
 Server: PostgreSQL, Python, Flask, SQLAlchemy
 
+## Live site
+
+https://iceek.herokuapp.com/
+
 ## Getting started
 
 1. Clone this repository (only this branch)
