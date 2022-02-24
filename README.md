@@ -1,6 +1,8 @@
-# Flask React Project
+# ICEEK
 
-This is the starter for the Flask React project.
+ Iceek is an Airbnb clone but for ice skating. This app allows you
+ to host ice arenas, find ice arenas and also leave reviews on ice
+ arenas.
 
 
 ## Tech Stack
