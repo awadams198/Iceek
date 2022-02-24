@@ -227,6 +227,7 @@ const CreateArenaForm = () => {
                 required
               />
             </div>
+            <p>image url for pre grading: https://i.ibb.co/c11jwsP/joseph-barrientos-zv-B76-Raf6-Eo-unsplash.jpg</p>
           </div>
           <button className="post-arena-form-button" type="submit">
             Post Arena
