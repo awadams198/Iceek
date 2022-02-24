@@ -4,9 +4,9 @@
   background-color: #d6ecef;
   background-repeat: no-repeat;
   min-width: 100%;
-  max-width: 100%;
+  max-width: 80%;
   background-position: center;
-  height: 1000px;
+  height: 900px;
 }
 .main-bg-1 {
   background-image: url("https://i.ibb.co/x2pGh2M/touann-gatouillat-vergos-S-5qu7iw-Qfc-unsplash.jpg");
@@ -20,7 +20,7 @@
   margin: 0px px -200px -200px;
   border: 5px solid white;
   width: 300px;
-  height: 810px;
+  height: 850px;
   object-fit: contain;
 }
 
@@ -65,7 +65,7 @@
   border-radius: 10px;
   width: 400px;
   flex-wrap: wrap;
-  margin-left: 752px;
+  margin-left: 754px;
   margin-bottom: 20px;
   box-sizing: border-box;
   padding: 15px;
