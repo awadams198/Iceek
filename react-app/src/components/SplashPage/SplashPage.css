@@ -1,49 +1,49 @@
+.main-bg {
+  background-image: url("https://i.ibb.co/VCwtBxh/redcharlie-ZH2-Qo9-So3-Xg-unsplash.jpg");
+  background-size: cover;
+  background-color: #d6ecef;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  max-width: 100%;
+  background-position: center;
+  height: 1000px;
+}
+.main-bg-1 {
+  background-image: url("https://i.ibb.co/x2pGh2M/touann-gatouillat-vergos-S-5qu7iw-Qfc-unsplash.jpg");
+  background-size: cover;
+  background-color: #d6ecef;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  max-width: 80%;
+  background-position: center;
+  height: 900px;
+  margin: 0px px -200px -200px;
+  border: 5px solid white;
+  width: 300px;
+  height: 810px;
+  object-fit: contain;
+}
 
-
-  .main-bg{
-    background-image: url("https://i.ibb.co/VCwtBxh/redcharlie-ZH2-Qo9-So3-Xg-unsplash.jpg");
-    background-size:cover;
-    background-color: aqua;
-    background-repeat:no-repeat;
-    min-width: 100%;
-    max-width: 100%;
-    background-position: center;
-    height: 1000px;
-  }
-
-  .homeFooter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    background-color: rgb(85,85,85);
+.homeFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(85, 85, 85);
 }
 
 .homeAboutContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
 }
 
 .homeAboutImg {
-    height: 64px;
-    width: auto;
+  height: 64px;
+  width: auto;
 }
 
-.berkeley-spots-parent-container {
-  /* position: relative; */
-  /* left: 0; */
-  /* border: 1px solid lightgrey; */
-  padding: 20px;
-  padding-bottom: 10px;
-  width: 750px;
-  margin-top: 40px;
-  height: 1359px;
-  /* margin-left: 40px; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.title{
+.title {
   display: flex;
   justify-content: center;
   bottom: 20px;
@@ -51,4 +51,60 @@
   font-family: Georgia, sans-serif;
   font-size: 4em;
   letter-spacing: -2px;
+  text-shadow: 0 0 5px black;
+}
+
+.about-site {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  border-radius: 10px;
+  width: 400px;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px -2px rgb(201, 201, 201);
+  flex-direction: column;
+  justify-content: space-between;
+  right: 50px;
+  background-color: rgba(255, 255, 255, 0.317); */
+  background-color: rgba(255, 255, 255, 0.317);
+  color: #80b4df;
+}
+
+.about-site-bg {
+  color: #80b4df;
+}
+
+.about {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  width: 400px;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px -2px rgb(201, 201, 201);
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  right: 50px;
+  /* align-items: center; */
+  background-color: rgba(255, 255, 255, 0.317);
 }
