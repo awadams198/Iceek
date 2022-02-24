@@ -2,6 +2,13 @@
 
 This is the starter for the Flask React project.
 
+
+## Tech Stack
+
+Client: JavaScript, NodeJS, React, Redux
+
+Server: PostgreSQL, Python, Flask, SQLAlchemy
+
 ## Getting started
 
 1. Clone this repository (only this branch)
