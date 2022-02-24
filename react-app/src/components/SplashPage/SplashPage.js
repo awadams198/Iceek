@@ -13,9 +13,7 @@ function SplashPage({ isLoaded }) {
       <>
         <div className="main-bg">
           <h1 className="title">ICEEK</h1>
-        </div>
-        <div className="about">
-          <div className="about-site-bg">
+          <div className="about-site-text-color">
             <p className="about-site">
               Iceek is an Airbnb clone but for ice skating. This app allows you
               to host ice arenas, find ice arenas and also leave reviews on ice
