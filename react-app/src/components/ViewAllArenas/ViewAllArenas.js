@@ -25,7 +25,10 @@ function ViewArenas() {
         {arenasArray.map((arena) => {
           return (
             <div className="arena-div" key={arena.id}>
-              <div>
+                <div className="arena-title">{arena.name}</div>
+                <div className="arena-details">{arena.city},{arena.state}</div>
+                <div className="arena-price">${arena.price} /event</div>
+              <div className="arena-div1">
                 <img
                   className="arena-main-images"
                   onClick={() => history.push(`/arenas/${arena.id}`)}
@@ -34,9 +37,6 @@ function ViewArenas() {
                 />
               </div>
               <div className="arena-info-div">
-                <div className="arena-title">{arena.name}</div>
-                <div className="arena-details">{arena.city},{arena.state}</div>
-                <div className="arena-price">${arena.price} /event</div>
               </div>
             </div>
           );

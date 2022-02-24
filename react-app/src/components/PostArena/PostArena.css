@@ -70,7 +70,8 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  bottom: 50px
+  bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .arena-label {
