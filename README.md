@@ -15,6 +15,11 @@ Server: PostgreSQL, Python, Flask, SQLAlchemy
 
 https://iceek.herokuapp.com/
 
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/86488501/155614484-cb45c5bf-eafc-45b6-b3a3-160fe8f6a54c.png)
+
+
 ## Getting started
 
 1. Clone this repository (only this branch)
