@@ -10,13 +10,17 @@
 }
 
 .edit-header {
-  color: #1325c9;
+  /* color: #1325c9; */
+  color: black;
   font-size:26px; font-weight:300;
 }
 
 .edit-form-name,
-.edit-form-price {
-  color: #1325c9;
+.edit-form-price,
+.edit-arena-img,
+.edit-form-address {
+  /* color: #1325c9; */
+  color: black;
   font-size:20px; font-weight:300;
 }
 
@@ -47,5 +51,6 @@
 }
 
 .error-msg {
-  color: black;
+  /* color: black; */
+  color: #1325c9;
 }

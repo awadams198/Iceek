@@ -115,9 +115,9 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-header"> Address </label>
+                <label className="edit-form-address"> Address </label>
                 <input
-                  className="edit-Home-input"
+                  className="edit-arena-input"
                   name="address"
                   type="input"
                   placeholder="address"
@@ -126,9 +126,9 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-header"> Image One</label>
+                <label className="edit-arena-img"> Image One</label>
                 <input
-                  className="edit-Home-input"
+                  className="edit-arena-input"
                   name="image-one"
                   type="input"
                   placeholder="Image URL"
@@ -137,9 +137,9 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-header"> Image Two</label>
+                <label className="edit-arena-img"> Image Two</label>
                 <input
-                  className="edit-Home-input"
+                  className="edit-arena-input"
                   name="image-two"
                   type="input"
                   placeholder="Image URL"
@@ -148,9 +148,9 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-header"> Image Three</label>
+                <label className="edit-arena-img"> Image Three</label>
                 <input
-                  className="edit-Home-input"
+                  className="edit-arena-input"
                   name="image-three"
                   type="input"
                   placeholder="Image URL"
