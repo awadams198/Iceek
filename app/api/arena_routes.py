@@ -76,6 +76,16 @@ def updateArena(id):
     arenaToUpdate = Arena.query.get(id)
     arenaToUpdate.price = request.json["price"]
     arenaToUpdate.name = request.json["name"]
+    arenaToUpdate.address = request.json["address"]
+
+    imageOneUpdate = Image.query.get(request.json["imageOneId"])
+    imageOneUpdate.url = request.json["imageOneUrl"]
+
+    imageTwoUpdate = Image.query.get(request.json["imageTwoId"])
+    imageTwoUpdate.url = request.json["imageTwoUrl"]
+
+    imageThreeUpdate = Image.query.get(request.json["imageThreeId"])
+    imageThreeUpdate.url = request.json["imageThreeUrl"]
 
     db.session.commit()
     updatedArena = Arena.query.get(id)

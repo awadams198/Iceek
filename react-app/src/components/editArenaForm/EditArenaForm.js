@@ -20,6 +20,10 @@ const EditArenaForm = () => {
   }
   const [price, setPrice] = useState(currentArena?.price);
   const [name, setName] = useState(currentArena?.name);
+  const [address, setAddress] = useState(currentArena?.address);
+  const [imageOne, setImageOne] = useState(currentArena?.images[0]?.url);
+  const [imageTwo, setImageTwo] = useState(currentArena?.images[1]?.url);
+  const [imageThree, setImageThree] = useState(currentArena?.images[2]?.url);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,27 +33,53 @@ const EditArenaForm = () => {
 
     if (!name) {
       validationErrors.push("Arena name must be between 1 and 40 characters.");
-    } 
-    
-    else if (!price) {
+    } else if (!price) {
       validationErrors.push("Please enter a valid price between $1 and $1,000");
+    } else if (!address) {
+      validationErrors.push("---address can't be empty---");
+    } else if (
+      imageOne.length == 0 ||
+      imageTwo.length == 0 ||
+      imageThree.length == 0
+    ) {
+      validationErrors.push("Please enter a valid image URL");
+    } else if (
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(imageOne) ||
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(imageTwo) ||
+      !/\.(jpe?g|png|gif|bmp)$/gi.test(imageThree)
+    ) {
+      validationErrors.push(
+        "Must be a valid image URL  (.jpeg, .png, .gif, .bmp---"
+      );
     }
 
     setErrors(validationErrors);
 
     if (!validationErrors.length) {
-        await dispatch(
-          arenaActions.updateArena_thunk({ id, userId, price, name })
-          ).catch(async (res) => {
-            const data = await res.json();
-            if (data && data.errors) setErrors(data.errors);
-          });
-          await dispatch(arenaActions.getAllArenas_thunk()).then(
-            (res) => res && history.push("/arenas")
-            );
-          }
-          };
-          
+      await dispatch(
+        arenaActions.updateArena_thunk({
+          id,
+          userId,
+          price,
+          name,
+          address,
+          imageOneId: currentArena?.images[0]?.id,
+          imageOneUrl: imageOne,
+          imageTwoId: currentArena?.images[1]?.id,
+          imageTwoUrl: imageTwo,
+          imageThreeId: currentArena?.images[2]?.id,
+          imageThreeUrl: imageThree,
+        })
+      ).catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
+      await dispatch(arenaActions.getAllArenas_thunk()).then(
+        (res) => res && history.push("/arenas")
+      );
+    }
+  };
+
   return (
     <>
       <section>
@@ -82,6 +112,50 @@ const EditArenaForm = () => {
                   max="10000"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
+                ></input>
+              </div>
+              <div>
+                <label className="edit-header"> Address </label>
+                <input
+                  className="edit-Home-input"
+                  name="address"
+                  type="input"
+                  placeholder="address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                ></input>
+              </div>
+              <div>
+                <label className="edit-header"> Image One</label>
+                <input
+                  className="edit-Home-input"
+                  name="image-one"
+                  type="input"
+                  placeholder="Image URL"
+                  value={imageOne}
+                  onChange={(e) => setImageOne(e.target.value)}
+                ></input>
+              </div>
+              <div>
+                <label className="edit-header"> Image Two</label>
+                <input
+                  className="edit-Home-input"
+                  name="image-two"
+                  type="input"
+                  placeholder="Image URL"
+                  value={imageTwo}
+                  onChange={(e) => setImageTwo(e.target.value)}
+                ></input>
+              </div>
+              <div>
+                <label className="edit-header"> Image Three</label>
+                <input
+                  className="edit-Home-input"
+                  name="image-three"
+                  type="input"
+                  placeholder="Image URL"
+                  value={imageThree}
+                  onChange={(e) => setImageThree(e.target.value)}
                 ></input>
               </div>
             </div>

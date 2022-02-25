@@ -76,7 +76,19 @@ export const addArena_thunk =
 
 //UPDATE ARENA
 export const updateArena_thunk =
-  ({ id, userId, price, name }) =>
+  ({
+    id,
+    userId,
+    price,
+    name,
+    address,
+    imageOneId,
+    imageOneUrl,
+    imageTwoId,
+    imageTwoUrl,
+    imageThreeId,
+    imageThreeUrl,
+  }) =>
   async (dispatch) => {
     const res = await fetch(`/api/arenas/${id}/edit`, {
       method: "PUT",
@@ -87,6 +99,13 @@ export const updateArena_thunk =
         userId,
         price,
         name,
+        address,
+        imageOneId,
+        imageOneUrl,
+        imageTwoId,
+        imageTwoUrl,
+        imageThreeId,
+        imageThreeUrl,
       }),
     });
 

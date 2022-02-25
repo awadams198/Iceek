@@ -83,11 +83,12 @@ function SingleArena() {
       ></textarea>
       <span>
         {/* <div className='edit-review-update-button'> */}
-          <button className="edit-review-update-button"
-            onClick={() => editReview(editReviewId, editedReview)}
-          >
-            Update
-          </button>
+        <button
+          className="edit-review-update-button"
+          onClick={() => editReview(editReviewId, editedReview)}
+        >
+          Update
+        </button>
         {/* </div> */}
       </span>
     </div>
@@ -96,6 +97,7 @@ function SingleArena() {
   const editReview = async (id) => {
     let reviewId = editReviewId;
     let review = editedReview;
+    setErrors([]);
     if (editedReview) {
       await dispatch(arenaStore.editReview_thunk({ reviewId, review }));
       await dispatch(arenaStore.getAllArenas_thunk());
@@ -191,31 +193,31 @@ function SingleArena() {
                   {editSelected[0] && editSelected[1] == arena.id
                     ? reviewEdit
                     : arena?.review}
-                    
-              {user?.id == arena?.userId && (
-                <div className="edit-delete-button-review">
-                  <div className="review-edit-b">
-                    <button
-                      className="edit-review-arena-button"
-                      onClick={() => {
-                        setEditedReview(arena.review);
-                        setEditReviewId(arena.id);
-                        setEditSelected([!editSelected[0], arena.id]);
-                      }}
-                    >
-                      Edit
-                    </button>
-                  </div>
-                  <div className="delete-review-b">
-                    <button
-                      className="delete-review-button"
-                      onClick={() => deleteReview(arena.id)}
-                    >
-                      <i className="far fa-trash-alt"></i>Delete
-                    </button>
-                  </div>
-                </div>
-              )}
+
+                  {user?.id == arena?.userId && (
+                    <div className="edit-delete-button-review">
+                      <div className="review-edit-b">
+                        <button
+                          className="edit-review-arena-button"
+                          onClick={() => {
+                            setEditedReview(arena.review);
+                            setEditReviewId(arena.id);
+                            setEditSelected([!editSelected[0], arena.id]);
+                          }}
+                        >
+                          Edit
+                        </button>
+                      </div>
+                      <div className="delete-review-b">
+                        <button
+                          className="delete-review-button"
+                          onClick={() => deleteReview(arena.id)}
+                        >
+                          <i className="far fa-trash-alt"></i>Delete
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
