@@ -22,9 +22,11 @@ const SignUpForm = () => {
       setErrors(["password must be longer than 4 characters"]);
     } else if (email.length < 3) {
       setErrors(["Invalid email"]);
-    } else if (password !== repeatPassword) {
-      setErrors(["Passwords don't match"]);
-    } else if (password === repeatPassword) {
+    } 
+    // else if (password !== repeatPassword) {
+    //   setErrors(["Passwords don't match"]);
+    // }
+     else if (password === repeatPassword) {
       const data = await dispatch(signUp(username, email, password));
       if (data) {
         setErrors(data);
