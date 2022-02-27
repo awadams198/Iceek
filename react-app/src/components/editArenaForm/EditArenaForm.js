@@ -126,7 +126,7 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-arena-img"> Image One</label>
+                <label className="edit-arena-img"> Image 1</label>
                 <input
                   className="edit-arena-input"
                   name="image-one"
@@ -137,7 +137,7 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-arena-img"> Image Two</label>
+                <label className="edit-arena-img"> Image 2</label>
                 <input
                   className="edit-arena-input"
                   name="image-two"
@@ -148,7 +148,7 @@ const EditArenaForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="edit-arena-img"> Image Three</label>
+                <label className="edit-arena-img"> Image 3</label>
                 <input
                   className="edit-arena-input"
                   name="image-three"
