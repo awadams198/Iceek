@@ -101,6 +101,8 @@ function SingleArena() {
     if (editedReview) {
       await dispatch(arenaStore.editReview_thunk({ reviewId, review }));
       await dispatch(arenaStore.getAllArenas_thunk());
+    } else {
+      return setErrors(["Review edit field can not be empty"]);
     }
     setEditSelected([false, null]);
   };
