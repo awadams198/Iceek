@@ -23,7 +23,6 @@
   font-size: 14px;
   color: rgb(255, 255, 255);
   /* top: 5px; */
-  padding: ;
 }
 .section-container {
   background-color: #d6ecef;
@@ -60,7 +59,7 @@
   /* flex-direction: column; */
   /* align-items: center; */
   /* justify-content: space-evenly; */
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .new-arena-input {
