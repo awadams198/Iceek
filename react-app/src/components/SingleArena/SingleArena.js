@@ -19,6 +19,14 @@ function SingleArena() {
   const [errors, setErrors] = useState([]);
   const userId = user?.id;
 
+  const dhandleSubmit = async e => {
+    e.preventDefault();
+    if (window.confirm('Are you sure you wish to delete this item?')) dispatch(arenaStore.deleteArena_thunk(id));
+   
+    history.push(`/arenas`);
+
+}
+
   if (!arenas) {
     history.push("/arenas");
   }
@@ -46,7 +54,7 @@ function SingleArena() {
         <div>
           <button
             className="delete-arena-button"
-            onClick={() => deleteArena(id)}
+            onClick={dhandleSubmit}
           >
             <i className="far fa-trash-alt"></i>Delete
           </button>
@@ -56,6 +64,7 @@ function SingleArena() {
   }
 
   const deleteArena = async (id) => {
+    // if (window.confirm('Are you sure you want to delete this?')) dispatch(deleteArena(id));
     await dispatch(arenaStore.deleteArena_thunk({ id }));
     await dispatch(arenaStore.getAllArenas_thunk());
     history.push("/arenas");
