@@ -47,7 +47,7 @@ flask seed all
 
 flask run
 
-Open another terminal and change directory into /react-app and run the React app
+8. Open another terminal and change directory into /react-app and run the React app
 
 npm start
 
