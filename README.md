@@ -62,4 +62,11 @@ Arenas page
 Host Arena page
 ![image](https://user-images.githubusercontent.com/86488501/155616542-c1f7be44-03fe-4325-b720-47738a926e70.png)
 ![image](https://user-images.githubusercontent.com/86488501/155616642-b3734531-4eb9-4a00-b202-7d9b4b421856.png)
+ 
+ ## Documentation
+ 
+- [Feature List](https://github.com/awadams198/Iceek/wiki/Feature-List)
+- [User Stories](https://github.com/awadams198/Iceek/wiki/User-Stories)
+- [Database Schema](https://github.com/awadams198/Iceek/wiki/Database-Schema)
+
 
