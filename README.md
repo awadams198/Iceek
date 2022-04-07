@@ -15,6 +15,42 @@ Server: PostgreSQL, Python, Flask, SQLAlchemy
 
 https://iceek.herokuapp.com/
 
+## Getting started
+
+Clone this repository
+
+https://github.com/awadams198/Iceek.git
+
+CD into the /app directory and install dependencies
+
+pipenv install
+
+CD into the /react-app directory and install dependencies
+
+npm install
+
+Create a .env file based on the .env.example given
+
+Create a user in psql based on your .env DATABASE_URL app_name
+
+psql -c "CREATE USER <username> PASSWORD '<password>' CREATEDB"
+
+Create a databse in psql based on your.env DATABASE_URL app_db_name
+
+Start your shell, migrate your database, seed your database, and run the flask app
+
+pipenv shell
+
+flask db upgrade
+
+flask seed all
+
+flask run
+
+Open another terminal and change directory into /react-app and run the React app
+
+npm start
+
 ## Screenshots
 homepage
 
