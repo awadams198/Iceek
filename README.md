@@ -17,27 +17,27 @@ https://iceek.herokuapp.com/
 
 ## Getting started
 
-Clone this repository
+1. Clone this repository
 
 https://github.com/awadams198/Iceek.git
 
-CD into the /app directory and install dependencies
+2. CD into the /app directory and install dependencies
 
 pipenv install
 
-CD into the /react-app directory and install dependencies
+3. CD into the /react-app directory and install dependencies
 
 npm install
 
-Create a .env file based on the .env.example given
+4. Create a .env file based on the .env.example given
 
-Create a user in psql based on your .env DATABASE_URL app_name
+5. Create a user in psql based on your .env DATABASE_URL app_name
 
 psql -c "CREATE USER <username> PASSWORD '<password>' CREATEDB"
 
-Create a databse in psql based on your.env DATABASE_URL app_db_name
+6. Create a databse in psql based on your.env DATABASE_URL app_db_name
 
-Start your shell, migrate your database, seed your database, and run the flask app
+7. Start your shell, migrate your database, seed your database, and run the flask app
 
 pipenv shell
 
