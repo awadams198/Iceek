@@ -69,5 +69,5 @@ Host Arena page
 - [User Stories](https://github.com/awadams198/Iceek/wiki/User-Stories)
 - [Database Schema](https://github.com/awadams198/Iceek/wiki/Database-Schema)
  
-.
+
  
